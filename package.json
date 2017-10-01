@@ -1,16 +1,41 @@
 {
-  "name": "-fluid-events-main-site",
-  "description": "FLuid Events main site",
+  "name": "thefluidevents-co-uk",
+  "description": "The Fluid Events Company website",
+  "version": "0.0.1",
+  "author": "ninjanye",
+  "ava": {
+    "verbose": "true"
+  },
+  "bugs": "https://github.com/ninjanye/thefluidevents-co-uk/issues",
   "dependencies": {
-    "autoprefixer-stylus": "0.9.x",
-    "axis": "0.6.x",
-    "coffee-script": "1.x",
-    "css-pipeline": "0.3.x",
-    "jade": "1.x",
-    "js-pipeline": "0.2.x",
-    "jstransformer-marked": "1.x",
-    "marked": "0.3.x",
-    "rupture": "0.6.x",
-    "stylus": "0.54.x"
+    "autoprefixer-stylus": "^0.14.0",
+    "axis": "^1.0.0",
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.10.0",
+    "jstransformer-marked": "^1.0.1",
+    "marked": "^0.3.6",
+    "pug-static-loader": "^2.0.0",
+    "rupture": "^0.6.1",
+    "source-loader": "^1.0.0",
+    "spike": "^2.0.2",
+    "spike-page-id": "^1.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1"
+  },
+  "devDependencies": {
+    "ava": "^0.21.0",
+    "rimraf": "^2.5.4",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.1"
+  },
+  "homepage": "https://github.com/ninjanye/thefluidevents-co-uk",
+  "main": "app.js",
+  "private": "true",
+  "repository": "https://github.com/ninjanye/thefluidevents-co-uk",
+  "scripts": {
+    "lint": "standard | snazzy",
+    "precommit": "npm run lint -s",
+    "pretest": "npm run lint -s",
+    "test": "NODE_ENV=test ava"
   }
 }

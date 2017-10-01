@@ -10,13 +10,12 @@ $primary_colour_light = #ecece7
 $page_width = 980px;
 $mobile_width = 639px
 
-body
-  display: -webkit-flex;
+body, main
   display: flex
-  -webkit-flex-direction: column
   flex-direction: column
   align-items: center
 
+main,
 .full-width
   width: 100%
 
@@ -65,71 +64,80 @@ h1
   background-repeat: no-repeat
   background-size: cover  
 
+.promo_burst
+  text-align: center
+  color: white
+  z-index: -1
+
+.promo_burst_container .promo_burst span
+  position: relative
+
+.promo_burst .number
+  display: block
+  font-size: 100px
+  font-weight: bold
+  margin-top: -20px
+  z-index: 100
+
+.promo_burst .label
+  font-style: italic
+  z-index: 100
+
+.promo_burst_container *, 
+.promo_burst_container *:before, 
+.promo_burst_container *:after
+  box-sizing: border-box
+
 .promo_burst_container,
 .promo_burst_container:before,
 .promo_burst_container:after,
 .promo_burst_container .promo_burst,
 .promo_burst_container .promo_burst:before,
 .promo_burst_container .promo_burst:after
-	height: 8.5em
-	width: 8.5em
-	background: yellow top left no-repeat
-	background-size: 8.5em
+  height: 10em;
+  width: 10em;
+  background-color: yellow
 
 .promo_burst_container:before,
 .promo_burst_container:after,
 .promo_burst_container .promo_burst:before,
 .promo_burst_container .promo_burst:after
-	content: ""
-	position: absolute
+  content: "";
+  position: absolute;
 
 .promo_burst_container
-	position: relative /* Context */
-	top: 2.5em
-	left: 2.5em
-	transform: rotate(-45deg)
+  position: relative
+  top: 3.5em
+  left: 3.5em
+  transform: rotate(-45deg)
 
 .promo_burst_container:before
-	top: 0
-	left: 0
-	transform: rotate(-30deg)
+  top: 0
+  left: 0
+  transform: rotate(-30deg)
 
 .promo_burst_container:after
-	top: 0
-	left: 0
-	transform: rotate(-15deg)
+  top: 0
+  left: 0
+  transform: rotate(-15deg)
 
 .promo_burst_container .promo_burst
-	padding: .5em 0em
-	height: 7.5em /* height minus padding */
-	position: absolute
-	bottom: 0
-	right: 0
-	transform: rotate(45deg)
+  padding: 1em 1.5em
+  position: absolute
+  bottom: 0
+  right: 0
+  transform: rotate(45deg)
+  z-index: 1
 
 .promo_burst_container .promo_burst:before
-	top: 0
-	left: 0
-	transform: rotate(60deg)
+  top: 0
+  left: 0
+  transform: rotate(60deg)
 
 .promo_burst_container .promo_burst:after
-	top: 0
-	left: 0
-	transform: rotate(75deg)
-
-.promo_burst
-  text-align: center
-  color: white
-
-.promo_burst .number
-  display: block
-  font-size: 80px
-  font-weight: bold
-  margin-top: -10px
-
-.promo_burst .label
-  font-style: italic
-
+  top: 0
+  left: 0
+  transform: rotate(75deg)
 
 @media only screen and (max-width: $mobile_width)
   .hide_mobile
