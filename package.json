@@ -17,7 +17,7 @@
     "pug-static-loader": "^2.0.0",
     "rupture": "^0.6.1",
     "source-loader": "^1.0.0",
-    "spike": "^2.0.2",
+    "spike": "^2.2.0",
     "spike-page-id": "^1.0.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1"
