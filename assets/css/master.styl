@@ -5,7 +5,7 @@ base()
 
 $font-size-large = 22px
 $font-size-small = 12px
-$primary_colour_dark = #4f5358  
+$primary_colour_dark = #4f5358
 $primary_colour_light = #ecece7
 $page_width = 980px;
 $mobile_width = 639px
@@ -27,117 +27,67 @@ h1
   font-size: 34px
   text-transform: capitalize
   text-align: center
-  margin: 20px 0;   
+  margin: 20px 0;
+
+.section_header
+  width: 100%
+  margin: 20px 0 10px
+
+.section_header h1
+  border-bottom: 1px solid #AAA
+  line-height: 0.1em
+
+.section_header h1 span
+  background-color: #fff
+  padding: 0 40px
+
+.section_info
+  text-align: center
+  padding-bottom: 20px;
+
+.bold
+  font-weight: bold
 
 @import '_header'
 @import '_hero'
 @import '_callout'
 @import '_about'
+@import '_promo'
 
-.promo
+.packages_content
   display: flex
-  flex-wrap: wrap
-  width: 100%
+  flex-flow: row wrap
+  justify-content: space-between
+  align-content: stretch  
 
-.promo_message
-  flex: 1 1 33%
-  background-color: navy
-  color: white
+.packages_content .package
+  background-color: $primary_colour_light
+  border: solid 1px silver
+  border-radius: 5px
+  margin: 20px 10px
 
-.promo_message .headline
-  padding: 20px 40px
-  text-transform: uppercase
-  font-size: 70px
-  font-weight: bolder
-
-.promo_message .message
-  padding: 20px 40px
-  font-style: italic
-  font-size: 24px
-
-.promo_image
-  flex: 3 1 66%
-  background-image: url("/img/promo_drinks.jpg")
-  height: 500px
-  background-attachment fixed
-  background-position: center
-  background-repeat: no-repeat
-  background-size: cover  
-
-.promo_burst
+.packages_content .package h3
+  margin-top 15px
+  padding: 5px
   text-align: center
-  color: white
-  z-index: -1
+  text-transform: capitalize
+  background-color: white
 
-.promo_burst_container .promo_burst span
-  position: relative
+.packages_content .package ul
+  padding: 0 20px
 
-.promo_burst .number
-  display: block
-  font-size: 100px
-  font-weight: bold
-  margin-top: -20px
-  z-index: 100
-
-.promo_burst .label
+.packages_content .package ul li
   font-style: italic
-  z-index: 100
+  list-style: none
+  margin: 5px 0
 
-.promo_burst_container *, 
-.promo_burst_container *:before, 
-.promo_burst_container *:after
-  box-sizing: border-box
+ul li span.green
+  color: green
+  margin-right: 10px
 
-.promo_burst_container,
-.promo_burst_container:before,
-.promo_burst_container:after,
-.promo_burst_container .promo_burst,
-.promo_burst_container .promo_burst:before,
-.promo_burst_container .promo_burst:after
-  height: 10em;
-  width: 10em;
-  background-color: yellow
-
-.promo_burst_container:before,
-.promo_burst_container:after,
-.promo_burst_container .promo_burst:before,
-.promo_burst_container .promo_burst:after
-  content: "";
-  position: absolute;
-
-.promo_burst_container
-  position: relative
-  top: 3.5em
-  left: 3.5em
-  transform: rotate(-45deg)
-
-.promo_burst_container:before
-  top: 0
-  left: 0
-  transform: rotate(-30deg)
-
-.promo_burst_container:after
-  top: 0
-  left: 0
-  transform: rotate(-15deg)
-
-.promo_burst_container .promo_burst
-  padding: 1em 1.5em
-  position: absolute
-  bottom: 0
-  right: 0
-  transform: rotate(45deg)
-  z-index: 1
-
-.promo_burst_container .promo_burst:before
-  top: 0
-  left: 0
-  transform: rotate(60deg)
-
-.promo_burst_container .promo_burst:after
-  top: 0
-  left: 0
-  transform: rotate(75deg)
+@media only screen and (max-width: $mobile_width)
+  .package
+    flex-basis: 100%
 
 @media only screen and (max-width: $mobile_width)
   .hide_mobile
