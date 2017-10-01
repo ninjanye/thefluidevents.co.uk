@@ -3,9 +3,12 @@
 normalize-css()
 base()
 
+$font-size-large = 22px
+$font-size-small = 12px
 $primary_colour_dark = #4f5358  
 $primary_colour_light = #ecece7
-$page-width = 980px;
+$page_width = 980px;
+$mobile_width = 639px
 
 body
   display: -webkit-flex;
@@ -14,23 +17,120 @@ body
   flex-direction: column
   align-items: center
 
+.full-width
+  width: 100%
+
+.page-width
+  max-width $page_width
+  width: 100%
+
+h1
+  font-size: 34px
+  text-transform: capitalize
+  text-align: center
+  margin: 20px 0;   
+
 @import '_header'
+@import '_hero'
+@import '_callout'
+@import '_about'
 
-.hero
-  min-height: 600px
-  width: 100%
-  background: url('/img/home_hero.jpg') no-repeat
-  background-size: cover
-  background-position: center
+.promo
   display: flex
-  align-items: center
-  justify-content: center
-
-.hero img
-  max-height: 400px
+  flex-wrap: wrap
   width: 100%
-  margin: auto 20px
 
-@media only screen and (max-width: 639px)
-  .hero
-    min-height: 300px
+.promo_message
+  flex: 1 1 33%
+  background-color: navy
+  color: white
+
+.promo_message .headline
+  padding: 20px 40px
+  text-transform: uppercase
+  font-size: 70px
+  font-weight: bolder
+
+.promo_message .message
+  padding: 20px 40px
+  font-style: italic
+  font-size: 24px
+
+.promo_image
+  flex: 3 1 66%
+  background-image: url("/img/promo_drinks.jpg")
+  height: 500px
+  background-attachment fixed
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover  
+
+.promo_burst_container,
+.promo_burst_container:before,
+.promo_burst_container:after,
+.promo_burst_container .promo_burst,
+.promo_burst_container .promo_burst:before,
+.promo_burst_container .promo_burst:after
+	height: 8.5em
+	width: 8.5em
+	background: yellow top left no-repeat
+	background-size: 8.5em
+
+.promo_burst_container:before,
+.promo_burst_container:after,
+.promo_burst_container .promo_burst:before,
+.promo_burst_container .promo_burst:after
+	content: ""
+	position: absolute
+
+.promo_burst_container
+	position: relative /* Context */
+	top: 2.5em
+	left: 2.5em
+	transform: rotate(-45deg)
+
+.promo_burst_container:before
+	top: 0
+	left: 0
+	transform: rotate(-30deg)
+
+.promo_burst_container:after
+	top: 0
+	left: 0
+	transform: rotate(-15deg)
+
+.promo_burst_container .promo_burst
+	padding: .5em 0em
+	height: 7.5em /* height minus padding */
+	position: absolute
+	bottom: 0
+	right: 0
+	transform: rotate(45deg)
+
+.promo_burst_container .promo_burst:before
+	top: 0
+	left: 0
+	transform: rotate(60deg)
+
+.promo_burst_container .promo_burst:after
+	top: 0
+	left: 0
+	transform: rotate(75deg)
+
+.promo_burst
+  text-align: center
+  color: white
+
+.promo_burst .number
+  display: block
+  font-size: 80px
+  font-weight: bold
+  margin-top: -10px
+
+.promo_burst .label
+  font-style: italic
+
+
+@media only screen and (max-width: $mobile_width)
+  .hide_mobile
+    display: none

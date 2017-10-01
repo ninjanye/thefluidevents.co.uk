@@ -4,8 +4,6 @@
   display: flex
   align-items: center
   flex-wrap: wrap
-  max-width $page-width
-  width: 100%
 
 .header_container__logo
   flex-grow: 1
@@ -18,7 +16,7 @@
   display: flex
   flex-grow: 1; 
   flex-flow: row wrap
-  justify-content: center
+  justify-content: flex-end
 
 .header_container nav a
   color: #8892A1
@@ -31,6 +29,9 @@
 @media only screen and (max-width: 639px)
   .header_container__logo
     text-align: center
+
+  .header_container nav
+    justify-content: center
 
   .header_container nav a
     padding-bottom: 5px

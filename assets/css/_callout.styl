@@ -1,0 +1,50 @@
+.callouts
+  min-height: 200px
+  display: flex
+  flex-wrap: wrap
+
+.callouts a.callout
+  flex-grow: 1
+  text-align: center
+  text-decoration: none
+
+.callouts .callout .title
+  text-transform: uppercase
+  font-weight: bolder
+  font-size: $font-size-large
+  letter-spacing: 3px
+
+.callout__packages,
+.callout__contact
+  color: white
+
+.callout__gallery,
+.callout__events
+  color: #1c3766
+
+.callout__packages
+  background-color: #0e1b33
+
+.callout__contact
+  background-color: #285e88
+
+.callout__gallery
+  background-color: #ededed
+
+.callout__events
+  background-color: #8892a1
+
+.callout object
+  padding-top: 20px
+  padding-bottom: 20px
+  max-height: 100px
+
+.callout .title
+  padding-bottom: 10px
+
+@media only screen and (max-width: $mobile_width)
+  .callouts
+    min-height: 50px
+
+  .callout
+    flex-basis: 50%
