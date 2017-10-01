@@ -22,13 +22,16 @@ html
     .header_container.page-width
       .header_container__logo
         img(src="/img/logo_wide_dark.svg", alt="The Fluid Events Company Logo")
+
       nav
-        each val, key in menu  
-          if selected === key
-            a.selected(href=val, title=key)= key
-          else 
-            a(href=val, title=key)= key
-            
+        a.telephone(href="tel:+447754-21954") 
+          span.ico &#9742;
+          span.number 07754 219 540
+
+        a.email(href="mailto:info@thefluidevents.co.uk?subject=Website Enquiry") 
+          span.ico &#9993;
+          span.email info@thefluidevents.co.uk
+
     main(role='main')
       block content
 
