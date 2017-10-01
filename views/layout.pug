@@ -15,22 +15,30 @@ html
       link(rel='stylesheet' href='css/master.css')
 
   body(role='document')
-      block header
-        -var selected = "Home"
+    block header
+      -var selected = "Home"
 
-      -var menu = { 'Home': '/', 'Packages': '/packages', 'Gallery': '/gallery', 'Contact Us': '/contact-us' };
-      .header_container.page-width
-        .header_container__logo
-          img(src="/img/logo_wide_dark.svg", alt="The Fluid Events Company Logo")
-        nav
-          each val, key in menu  
-            if selected === key
-              a.selected(href=val, title=key)= key
-            else 
-              a(href=val, title=key)= key
-              
-      main(role='main')
-        block content
+    -var menu = { 'Home': '/', 'Packages': '/#packages', 'Gallery': '/#gallery', 'Contact Us': '/#contact' };
+    .header_container.page-width
+      .header_container__logo
+        img(src="/img/logo_wide_dark.svg", alt="The Fluid Events Company Logo")
+      nav
+        each val, key in menu  
+          if selected === key
+            a.selected(href=val, title=key)= key
+          else 
+            a(href=val, title=key)= key
+            
+    main(role='main')
+      block content
 
-      block javascript
-        script(src='js/main.js' defer)
+    footer
+      .copyright © 2017 by The Fluid Events Essex Company
+      .social
+        .facebook [FB]
+        .instagram [IG]
+        .twitter [TW]
+        .google [G+]
+
+    block javascript
+      script(src='js/main.js' defer)

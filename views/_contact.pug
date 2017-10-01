@@ -1,0 +1,15 @@
+#contact-us.section_header
+  h1 
+    span get in touch
+
+  .section-info.page-width
+    p 
+      span We at The Fluid Events Company have been working hard to put together a unique vehicle that will ensure the bubbles flow at your next big event.  
+      span If you are looking for something different at your party, prom or wedding, get in touch for exclusive early bird offers.
+
+    form(action="thank-you" name="contact" autocomplete="on" netlify)
+      .form_details_container
+        input#name(type="text" name="name" label="Name" placeholder="Name" required)
+        input#email(type="email" name="email", label="Email" placeholder="Email" required)
+      textarea#message(name="Message" cols="30", rows="5", placeholder="Message" autocomplete="off")
+      input#submit.btn(type="submit" value="Send >") 

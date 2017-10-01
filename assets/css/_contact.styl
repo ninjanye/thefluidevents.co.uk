@@ -1,0 +1,70 @@
+#contact-us,
+#contact-us.section_header h1 span
+  background-color: $primary_colour_dark
+  color: white
+
+#contact-us.section_header h1
+  padding-top: 10px
+  border-color: white
+  width: 100%
+
+#contact-us
+  display: flex
+  flex-flow: column wrap
+  align-items: center
+  text-align: center
+
+#contact-us form
+  padding: 20px 0
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
+
+#contact-us form .form_details_container
+  display: flex
+  flex-direction: row
+  width: 100%
+
+#contact-us form input,
+#contact-us form textarea
+  padding: 8px
+  border: 1px solid $primary_colour_light
+  border-radius: 3px
+  background-color: grey
+  color: $primary_colour_light
+  margin: 5px
+  width: 100%
+
+#contact-us form input#submit
+  border-color: navy
+  background-color: navy
+  padding: 10px
+  color: white
+  font-weight: bold
+
+#contact-us form input#submit:hover
+  background-color: blue
+
+#contact-us form input::-webkit-input-placeholder,
+#contact-us form textarea::-webkit-input-placeholder
+  color: lightgrey
+
+#contact-us form input:-moz-placeholder,
+#contact-us form textarea:-moz-placeholder
+  color: lightgrey
+  
+#contact-us form input:-moz-placeholder,
+#contact-us form textarea:-moz-placeholder
+  color: lightgrey
+  
+#contact-us form input:-ms-input-placeholder,
+#contact-us form textarea:-ms-input-placeholder
+  color: lightgrey
+
+#contact-us form input[type="submit"]
+  background-color: navy
+  padding: 0 50px
+
+@media only screen and (max-width: $mobile_width)
+  #contact-us form .form_details_container
+    flex-wrap: wrap
