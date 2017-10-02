@@ -1,5 +1,5 @@
 doctype html
-html
+html(lang="en")
   head
     block meta
       meta(charset='utf-8')
@@ -15,10 +15,6 @@ html
       link(rel='stylesheet' href='css/master.css')
 
   body(role='document')
-    block header
-      -var selected = "Home"
-
-    -var menu = { 'Home': '/', 'Packages': '/#packages', 'Gallery': '/#gallery', 'Contact Us': '/#contact' };
     .header_container.page-width
       .header_container__logo
         img(src="/img/logo_wide_dark.svg", alt="The Fluid Events Company Logo")
@@ -43,5 +39,5 @@ html
         .twitter [TW]
         .google [G+]
 
-    block javascript
-      script(src='js/main.js' defer)
+    //- block javascript
+    //-   script(src='js/main.js' defer)

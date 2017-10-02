@@ -9,7 +9,10 @@
 
     form(action="thank-you" name="contact" autocomplete="on" netlify)
       .form_details_container
+        label(for="Name")
         input#name(type="text" name="name" label="Name" placeholder="Name" required)
+        label(for="Email")
         input#email(type="email" name="email", label="Email" placeholder="Email" required)
+      label(for="Message")
       textarea#message(name="Message" cols="30", rows="5", placeholder="Message" autocomplete="off")
       input#submit.btn(type="submit" value="Send >") 
