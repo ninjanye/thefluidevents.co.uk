@@ -39,5 +39,8 @@ html(lang="en")
         .twitter [TW]
         .google [G+]
 
-    //- block javascript
-    //-   script(src='js/main.js' defer)
+    block javascript
+      script(src='js/lazyload.js')
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.3.1/lazyload.min.js" async)
+      
+      script(src='js/main.js' defer)
