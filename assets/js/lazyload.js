@@ -1,3 +1,3 @@
-window.lazyLoadOptions = {    
-    elements_selector: ".promo_image"
+window.lazyLoadOptions = {
+    elements_selector: '.lazy'
 };
