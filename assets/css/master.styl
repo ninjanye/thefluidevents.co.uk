@@ -69,6 +69,24 @@ h1
 @import '_contact'
 @import '_footer'
 
+.masonry
+  column-count: 3
+  column-gap: 1em
+
+.masonry .item
+    display: inline-block
+    margin: 0 0 1em
+    width: 100%
+    text-align: center
+
+.masonry .item img 
+    max-width: 100%
+    height: auto
+    display: block
+
 @media only screen and (max-width: $mobile_width)
+  .masonry
+    column-count: 2
+
   .hide_mobile
     display: none
