@@ -6,7 +6,7 @@
   "ava": {
     "verbose": "true"
   },
-  "bugs": "https://github.com/ninjanye/thefluidevents-co-uk/issues",
+  "bugs": "https://github.com/ninjanye/fluideventsco/issues",
   "dependencies": {
     "autoprefixer-stylus": "^0.14.0",
     "axis": "^1.0.0",
@@ -28,10 +28,10 @@
     "snazzy": "^7.0.0",
     "standard": "^10.0.1"
   },
-  "homepage": "https://github.com/ninjanye/thefluidevents-co-uk",
+  "homepage": "https://github.com/ninjanye/fluideventsco",
   "main": "app.js",
   "private": "true",
-  "repository": "https://github.com/ninjanye/thefluidevents-co-uk",
+  "repository": "https://github.com/ninjanye/fluideventsco",
   "scripts": {
     "lint": "standard | snazzy",
     "precommit": "npm run lint -s",
