@@ -1,26 +1,26 @@
-.packages_wrapper
-  background-color: #fddee2
-
 .packages_content
   display: flex
   flex-flow: row wrap
   justify-content: space-between
   align-content: stretch
 
-.packages_content .package
-  background-color: $primary_colour_light
-  border: solid 2px silver
-  border-radius: 5px
+.packages_content a.package
+  background-color: $colour_three
+  border: solid 1px $colour_one
+  // border-radius: 5px
   margin: 20px 10px
   display: flex
   flex-direction: column
+  text-decoration: none
+  color: $primary_colour_dark
 
 .packages_content .package h3
   margin: 0
   padding: 10px
   text-align: center
   text-transform: capitalize
-  background-color: white
+  background-color: $colour_three
+  color: $colour_one
 
 .packages_content .package ul
   padding: 20px 20px
@@ -38,28 +38,36 @@ ul li span.green
 
 .packages_content .package .most_popular .heart
   padding: 0 5px
+  color: red
 
 .packages_content .package .most_popular
-  background-color: red
-  color: white
+  background-color: $colour_two
+  color: $primary_colour_dark
   padding: 5px 10px
   text-align: center
 
 .packages_content .package .cta
-  display: flex
-  background-color: white
+  // display: flex
+  background-color: $colour_one
   padding: 10px
   align-items: center
-
-.packages_content .package .cta div 
-  flex-basis: 50%
-
-.packages_content .package .cta .price
-  font-size: 20px
+  color: white
   font-weight: bold
 
-.packages_content .package .cta .enquire
-  text-align: right
+.packages_content .package .cta div 
+  // flex-basis: 50%
+  text-align: center
+
+.packages_content .package .price
+  font-size: 20px
+  font-weight: bold
+  background-color: white
+  text-align: center
+  padding: 5px
+
+.packages_content .package .cta .enquire .btn
+  background-color: $colour_one
+  color: white
 
 .packages_content .package .cta .enquire a:hover
   background-color: blue

@@ -3,10 +3,16 @@
 normalize-css()
 base()
 
+$colour_one = #8C929F
+$colour_two = #EFC1BA
+$colour_three = #E7E9EC
+$colour_four = #B4B9AA
+$colour_five = #9A9F90
+
 $font-size-large = 22px
 $font-size-small = 12px
 $primary_colour_dark = #4f5358
-$primary_colour_light = #ecece7
+$primary_colour_light = $colour_three
 $page_width = 980px;
 $mobile_width = 639px
 
@@ -34,8 +40,10 @@ h1
   margin: 20px 0 10px
 
 .section_header h1
-  border-bottom: 1px solid #AAA
+  border-bottom: 1px solid $primary_colour_dark
+  // border-bottom: 1px solid #AAA
   line-height: 0.1em
+  color: $primary_colour_dark
 
 .section_header h1 span
   background-color: #fff
@@ -50,8 +58,9 @@ h1
 
 .btn
   padding: 5px
-  background-color: navy
-  color: white
+  background-color: $colour_two
+  // background-color: navy
+  color: $primary_colour_dark
   text-transform: capitalize
   text-decoration: none
   border-radius: 3px  
@@ -59,6 +68,9 @@ h1
 .btn:after
   content: '>'
   padding-left: 5px
+
+.mobile_only
+  display: none
 
 @import '_header'
 @import '_hero'
@@ -80,6 +92,7 @@ h1
     text-align: center
 
 .masonry .item img 
+    width: 100%
     max-width: 100%
     height: auto
     display: block
@@ -87,6 +100,12 @@ h1
 @media only screen and (max-width: $mobile_width)
   .masonry
     column-count: 2
+
+  .desktop_only
+    display: none !important
+
+  .mobile_only
+    display: block
 
   .hide_mobile
     display: none
