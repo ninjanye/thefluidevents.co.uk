@@ -1,4 +1,5 @@
 @import '_settings'
+@import '_flexbox'
 
 normalize-css()
 base()
@@ -16,8 +17,9 @@ $primary_colour_light = $colour_three
 $page_width = 980px;
 $mobile_width = 639px
 
-body, main
-  display: flex
+body, main  
+  flexbox(flex)
+  // display: flex
   flex-direction: column
   align-items: center
 
