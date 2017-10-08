@@ -32,12 +32,12 @@ html(lang="en")
         img.lazy(data-src="/img/logo_wide_dark.svg", alt="The Fluid Events Company Logo")
 
       nav
-        a.telephone(href="tel:+447754-21954") 
-          span.ico &#9742;
+        a.telephone(href="tel:+447754-21954")
+          img.ico(src="/img/phone.svg", alt="telephone icon")
           span.number 07754 219 540
 
         a.email(href="mailto:info@thefluidevents.co.uk?subject=Website Enquiry") 
-          span.ico &#9993;
+          img.ico(src="/img/email.svg", alt="email icon")
           span.email info@thefluidevents.co.uk
 
     main(role='main')
@@ -46,13 +46,26 @@ html(lang="en")
     footer
       .copyright © 2017 by The Fluid Events Essex Company
       .social
-        .facebook [FB]
-        .instagram [IG]
-        .twitter [TW]
-        .google [G+]
+        a(href="https://www.facebook.com/thefluideventsco/" target="_blank")
+          img.facebook(src="/img/facebook.svg" title="Facebook logo")
+        a(href="https://www.instagram.com/fluideventsco/" target="_blank")
+          img.instagram(src="/img/instagram.svg" title="Instagram logo")
+        a(href="https://twitter.com/fluideventsco/" target="_blank")
+          img.twitter(src="/img/twitter.svg" title="Twitter logo")
+        a(href="https://plus.google.com/u/1/117425984212672074805" target="_blank")
+          img.google(src="/img/google-plus.svg" title="Google Plus logo")
+
+      .credits
+        span Icons made by 
+        a(href="https://www.flaticon.com/authors/simpleicon" title="SimpleIcon") SimpleIcon
+        span and 
+        a(href="http://www.freepik.com" title="Freepik") Freepik
+        span from 
+        a(href="https://www.flaticon.com/" title="Flaticon") www.flaticon.com
+        span is licensed by 
+        a(href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank") CC 3.0 BY
 
     block javascript
       script(src='js/lazyload.js')
       script(src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.3.1/lazyload.min.js" async)
-
       script(src='js/main.js' defer)
