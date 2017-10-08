@@ -31,9 +31,17 @@
   list-style: none
   margin: 5px 0
 
-ul li span.green
-  color: green
+.packages_content .package ul li:before
+  content : '✓'
+  color : green
   margin-right: 10px
+
+.packages_content .package ul li span.option
+  background-color: $colour_two
+  padding: 2px 5px
+  border-radius: 4px
+  margin-left: 5px
+  font-size: 12px
 
 .packages_content .package .most_popular .heart
   padding: 0 5px
