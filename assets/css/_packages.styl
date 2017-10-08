@@ -5,6 +5,7 @@
   align-content: stretch
 
 .packages_content a.package
+  flex: 1 0 30%
   background-color: $colour_three
   border: solid 1px $colour_one
   margin: 20px 10px
@@ -12,6 +13,19 @@
   flex-direction: column
   text-decoration: none
   color: $primary_colour_dark
+
+.packages_content a.package.custom
+  background-color: #8c929f
+  text-align: center
+  font-weight: bold
+  color: #fff
+  font-size: 40px
+  text-transform: capitalize
+  line-height: 1.5
+
+.packages_content a.package.custom p
+  flex-grow: 1
+  padding: 0 40px
 
 .packages_content .package h3
   margin: 0
@@ -80,5 +94,8 @@
   background-color: blue
 
 @media only screen and (max-width: $mobile_width)
-  .package
+  .packages_content a.package
     flex-basis: 100%
+  
+  .packages_content a.package.custom
+    order: 1
