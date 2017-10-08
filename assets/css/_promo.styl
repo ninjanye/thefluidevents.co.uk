@@ -1,7 +1,6 @@
 .promo
   display: flex
   flex-wrap: wrap
-  width: 100%
 
 .promo_message
   flex: 1 1
@@ -13,6 +12,7 @@
   text-transform: uppercase
   font-size: 70px
   font-weight: bolder
+  color: $colour_two
 
 .promo_message .message
   padding: 20px 40px
@@ -102,3 +102,7 @@
   top: 0
   left: 0
   transform: rotate(75deg)
+
+@media only screen and (max-width: $mobile_width)
+  .promo_image
+    display: none
