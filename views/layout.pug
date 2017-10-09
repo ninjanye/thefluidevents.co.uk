@@ -14,8 +14,15 @@ html(lang="en")
       meta(property="og:title" content="Mobile Bar | Prosecco Van | The Fluid Events Co.")
       meta(property="og:description" content="Prosecco van and mobile bar ready for hire at your next event")
       meta(property="og:image" content="/img/logo_wide_dark.svg")
-      //- TODO: Google AMP
-      //- TODO: Google Analytics
+      //- Global Site Tag (gtag.js) - Google Analytics
+      script(async src="https://www.googletagmanager.com/gtag/js?id=UA-104065684-1")
+      script
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-104065684-1');
+
+      //- TODO: Google AMP      
       //- TODO: Link Google
       //- TODO: Link FB
       //- TODO: Link Twitter
