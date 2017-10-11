@@ -8,7 +8,7 @@ html(lang="en")
       meta(name='author' content='ninjanye')
       meta(name="viewport" content="width=device-width, initial-scale=1")
       meta(name="theme-color" content="#EFC1BA")
-      //- TODO: OpenGraph
+      //- OpenGraph
       meta(property="og:url" content=path)
       meta(property="og:type" content="website")
       meta(property="og:title" content="Mobile Bar | Prosecco Van | The Fluid Events Co.")
@@ -21,6 +21,9 @@ html(lang="en")
       script(src="/js/ga.js")
 
       //- TODO: Google AMP
+      //- TODO: Port Blog
+      //- TODO: Google card
+
 
     block title
       title Mobile Bar | Prosecco Van | The Fluid Events Co.
@@ -38,9 +41,9 @@ html(lang="en")
           img.ico(src="/img/phone.svg", alt="telephone icon")
           span.number 07754 219 540
 
-        //- a.email(href="mailto:info@thefluidevents.co.uk?subject=Website%20Enquiry")
-        //-   img.ico(src="/img/email.svg", alt="email icon")
-        //-   span.email info@thefluidevents.co.uk
+        a.email(href="mailto:info@thefluidevents.co.uk?subject=Website%20Enquiry")
+          img.ico(src="/img/email.svg", alt="email icon")
+          span.email info@thefluidevents.co.uk
 
     main(role='main')
       block content

@@ -7,6 +7,7 @@
   flex-grow: 1
   text-align: center
   text-decoration: none
+  color: white
 
 .callouts .callout .title
   text-transform: uppercase
@@ -14,16 +15,9 @@
   font-size: $font-size-large
   letter-spacing: 3px
 
-.callout__events,
-.callout__contact
-  color: white
-
 .callout__gallery,
 .callout__packages
   color: $primary_colour_dark
-
-.callout__contact
-  color: white
 
 .callout__events
   background-color: $colour_one
@@ -38,11 +32,24 @@
 .callout__contact
   background-color: $colour_four
 
+.callout__facebook
+  background-color: #3A559F
+
+.callout__insta
+  background-color: #C536A4
+
+.callout__twitter
+  background-color: #50ABF1
+
+.callout__google
+  background-color: #DD4B39
+
 .callout object,
 .callout img
   padding-top: 20px
   padding-bottom: 20px
   max-height: 100px
+  max-width: 100px
 
 .callout .title
   padding-bottom: 10px
@@ -53,3 +60,6 @@
 
   .callout
     flex-basis: 80%
+  
+  .callout__social
+    flex-basis: 50%
