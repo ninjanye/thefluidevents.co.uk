@@ -17,15 +17,19 @@
 
 .hero h1
   color: white
-  font-size: 100px
   font-style: italic
 
-.hero.thankyou
+.hero.thankyou,
+.hero.packages
   align-items: baseline
 
-.hero.thankyou h1
+.hero.thankyou h1,
+.hero.packages h1
   margin-top: 30px
 
+@media only screen and (min-width: $mobile_width)
+  .hero h1
+    font-size: 100px
 
 @media only screen and (max-width: $mobile_width)
   .hero

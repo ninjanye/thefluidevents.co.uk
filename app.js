@@ -18,7 +18,6 @@ module.exports = {
         options: {
           use: [axis(), rupture(), autoprefixer({
             browsers: 'defaults, last 4 versions, last 6 iOS versions, last 6 Android versions, last 6 Safari versions, last 2 ie versions'
-            // browsers: 'defaults, last 2 versions, ie >= 10, Android >= 4, Safari >= 6'
           })]
         }
       }]
