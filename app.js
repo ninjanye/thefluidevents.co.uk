@@ -35,5 +35,5 @@ module.exports = {
       use: [{ loader: 'coffee-loader' }]
     }]
   },
-  resolve: { extensions: ['.coffee', '.js'] }
+  resolve: { extensions: ['.coffee', '.js', '.tff'] }
 }
