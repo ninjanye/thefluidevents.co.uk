@@ -20,6 +20,10 @@ html(lang="en")
       meta(itemprop="image" content="https://www.thefluidevents.co.uk/img/logo_wide_dark.svg")
 
       meta(name="google-site-verification" content="gack_NwTv1bXdcLAFzvPG-o34aCk4tf8Z-tNdBfI284")
+
+      //- TODO: Structured Data (https://developers.google.com/search/docs/guides/intro-structured-data)
+      //- block structured_data
+
       //- Global Site Tag (gtag.js) - Google Analytics
       script(async src="https://www.googletagmanager.com/gtag/js?id=UA-104065684-1")
       script(src="/js/ga.js")
@@ -50,27 +54,7 @@ html(lang="en")
     main(role='main')
       block content
 
-    footer
-      .copyright © 2017 by The Fluid Events Essex Company
-      .social
-        a(href="https://www.facebook.com/thefluideventsco/" target="_blank" rel="noopener")
-          img.lazy.facebook(src="/img/facebook.svg" alt="Facebook logo")
-        a(href="https://www.instagram.com/fluideventsco/" target="_blank" rel="noopener")
-          img.lazy.instagram(src="/img/instagram.svg" alt="Instagram logo")
-        a(href="https://twitter.com/fluideventsco/" target="_blank" rel="noopener")
-          img.lazy.twitter(src="/img/twitter.svg" alt="Twitter logo")
-        a(href="https://plus.google.com/u/1/117425984212672074805" target="_blank" rel="noopener")
-          img.lazy.google(src="/img/google-plus.svg" alt="Google Plus logo")
-
-      .credits
-        span Icons made by
-        a(href="https://www.flaticon.com/authors/simpleicon" title="SimpleIcon") SimpleIcon
-        span and
-        a(href="http://www.freepik.com" title="Freepik") Freepik
-        span from
-        a(href="https://www.flaticon.com/" title="Flaticon") www.flaticon.com
-        span is licensed by
-        a(href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank" rel="noopener") CC 3.0 BY
+    include _footer
 
     block javascript
       script(src='js/lazyload.js')
