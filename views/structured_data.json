@@ -1,0 +1,19 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",  
+  "url": "https://www.thefluidevents.co.uk",
+  "logo": "https://www.thefluidevents.co.uk/img/logo_wide_dark.svg",
+  "name": "The Fluid Events Co.",
+  "sameAs": [
+    "https://www.facebook.com/thefluideventsco",
+    "https://twitter.com/fluideventsco",
+    "https://www.instagram.com/fluideventsco/",
+    "https://plus.google.com/u/1/117425984212672074805"    
+  ],
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+447754219540",
+    "contactType": "sales",
+    "areaServed": "GB"
+  }]
+}
