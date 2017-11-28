@@ -1,9 +1,9 @@
-//- extends layout
+extends bloglayout
 
-//- block content
-//-   .hero.lazy(data-src='/img/home_hero.jpg')
-//-     h1 The taste test... choosing Prosecco
+block content
+  .hero.lazy(data-src='/img/gallery/john_serving.jpg')
 
-//-   //- .content
-//-   //-   :marked 
-//-   //-     include TheTasteTest.md
+  .blog_content.page-width     
+    .blog_text
+      include:marked the-taste-test.md
+    .blog_image.lazy(data-src="/img/gallery/cheers.jpg", alt="prosecco cheers")

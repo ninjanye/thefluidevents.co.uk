@@ -42,7 +42,7 @@ html(lang="en")
       title=page_title
 
     block stylesheets
-      link(rel='stylesheet' href='css/master.css')
+      link(rel='stylesheet' href='/css/master.css')
 
   body(role='document')
     .header_container.page-width
@@ -60,10 +60,13 @@ html(lang="en")
 
     main(role='main')
       block content
+      a#contact(visibility="hidden")
+      block post_content
+      include _contact
 
     include _footer
 
     block javascript
-      script(src='js/lazyload.js')
+      script(src='/js/lazyload.js')
       script(src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.3.1/lazyload.min.js" async)
-      script(src='js/main.js' defer)
+      script(src='/js/main.js' defer)

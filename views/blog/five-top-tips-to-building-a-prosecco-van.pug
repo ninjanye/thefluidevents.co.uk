@@ -1,0 +1,11 @@
+extends /layout
+
+block content
+  .hero.lazy(data-src='/img/john_serving.jpg')
+    h1.dark Five top tops to building a prosecco van
+
+  .blog_content.page-width 
+    .blog_text
+      include:marked five-top-tips.md
+    .blog_image
+      img(src="/img/cheers.jpg", alt="prosecco cheers")

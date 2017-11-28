@@ -27,7 +27,8 @@ module.exports = {
         loader: 'pug-static-loader',
         options: {
           pretty: true,
-          locals: { foo: 'bar' }
+          locals: { foo: 'bar' },
+          basedir: 'views'
         }
       }]
     }, {

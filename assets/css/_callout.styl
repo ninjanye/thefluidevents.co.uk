@@ -8,6 +8,7 @@
   text-align: center
   text-decoration: none
   color: $primary_colour_dark
+  flex-basis: 0
 
 .callouts .callout .title
   text-transform: uppercase
@@ -18,23 +19,35 @@
 .callouts .callout__social .title
   color: white
 
+.callouts__blog a.callout
+  display: flex
+  align-items: center
+  flex-direction: column
+  justify-content: center
+  flex-basis: auto
+
 .callout__gallery,
 .callout__packages
   color: $primary_colour_dark
 
-.callout__events
+.callout__events,
+.callout__blog,
+.callout__blog__one
   background-color: $colour_one
-  display: none
 
-.callout__packages
+.callout__packages,
+.callout__blog__two
   background-color: $colour_two
 
-.callout__gallery
+.callout__gallery,
+.callout__blog__three
   background-color: $colour_three
 
-.callout__contact
+.callout__contact,
+.callout__blog__four
   background-color: $colour_four
 
+.callout__blog .title,
 .callout__contact .title
   color: white
 
@@ -63,6 +76,12 @@
 @media only screen and (max-width: $mobile_width)
   .callouts
     min-height: 50px
+
+  .callouts a.callout
+    flex-basis: 100%
+
+  .callouts__blog a
+    min-height: 120px
 
   .callout
     flex-basis: 80%
