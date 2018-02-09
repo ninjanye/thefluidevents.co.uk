@@ -1,0 +1,30 @@
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",  
+  "url": "https://www.thefluidevents.co.uk/blog/the-taste-test-choosing-prosecco",
+  "headline": "The Taste Test... Choosing Prosecco",
+  "alternativeHeadline": "How we chose the best prosecco so you don't have to",
+  "keywords": "prosecco van frizzanti glera grape taste corte delli calli",
+  "mainEntityOfPage": "https://www.thefluidevents.co.uk",
+  "publisher": {
+    "@type": "Organization",
+    "name": "The Fluid Events Co.",
+    "url": "https://www.thefluidevents.co.uk",
+    "logo": {
+      "@type": "ImageObject",
+      "width": "600",
+      "height": "60",
+      "url": "https://www.thefluidevents.co.uk/img/fluid_events_email_signature.jpg"
+      }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Liane"
+  },
+  "dateCreated": "2017-11-09",
+  "datePublished": "2017-11-11",
+  "dateModified": "2018-02-09",
+  "image": [
+    "https://www.thefluidevents.co.uk/img/gallery/cheers.jpg"
+  ]
+}

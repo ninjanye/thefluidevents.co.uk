@@ -1,5 +1,13 @@
 extends bloglayout
 
+block config
+  - var page_title = "How we chose our prosecco | Blog | The Fluid Events Co."
+  - var page_description = "Prosecco is at the heart of our business, and it had to taste amazing.  This is how we chose our prosecco."
+  - var page_image = "https://www.thefluidevents.co.uk/img/gallery/cheers.jpg"
+
+block structured_data
+  include the_taste_test_structured_data.json
+
 block content
   .hero.lazy(data-src='/img/gallery/john_serving.jpg')
 

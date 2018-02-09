@@ -1,8 +1,13 @@
 extends layout
 
+block config
+  - var page_title = "Popular Prosecco Van Packages | The Fluid Events Co."
+  - var page_description = "Our range of packages cater for weddings, parties, and corporate events throughout Essex. We can customise packages specifically for your needs without breaking the bank"
+  - var page_image = "https://www.thefluidevents.co.uk/img/gallery/flo_hedge.jpg"
+
 block content
-  .hero.packages.lazy(data-src='/img/gallery/flo_nearside_woodland.bw.large.jpg')  
-    h1 Our Packages
+  .hero.hero_slim.packages.lazy(data-src='/img/gallery/flo_nearside_woodland.bw.large.jpg')  
+    h1 Our Popular Packages
 
   a#wedding(visibility="hidden")
   h2 Wedding and Party Packages
@@ -10,7 +15,8 @@ block content
   .section_info.page-width
     span These are our most popular packages however 
     span.bold we can tailor any of our packages to your specific requirements. 
-    span For more information please get in via our 
+    span Each package can be customised to serve any combination of prosecco, pimms, peroni, wine and more. 
+    span For more information please get in touch via our 
     a(href="#contact") contact us
     span  section
 

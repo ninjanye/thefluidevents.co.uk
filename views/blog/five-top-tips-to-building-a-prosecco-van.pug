@@ -1,7 +1,15 @@
 extends bloglayout
 
+block config
+  - var page_title = "Five top tips for building a Prosecco Van | Blog | The Fluid Events Co."
+  - var page_description = "We share some of the lessons we learnt whilst building our beautiful prosecco van."
+  - var page_image = "https://www.thefluidevents.co.uk/img/gallery/teamfo_all.jpg"
+
+block structured_data
+  include five_top_tips_structured_data.json
+
 block content
   .blog_content.page-width 
     .blog_text
       include:marked five-top-tips.md
-    .blog_image.lazy(data-src="/img/gallery/flo_taps_xmas.jpg", alt="prosecco cheers")
+    .blog_image.lazy(data-src="/img/gallery/flo_taps_xmas.jpg", alt="christmas prosecco")

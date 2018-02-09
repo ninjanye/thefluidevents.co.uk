@@ -1,9 +1,10 @@
 doctype html
 html(lang="en")
   head
-    - var page_title = "Prosecco Van | Essex | The Fluid Events Co."
-    - var page_description = "Our prosecco van, mobile bar is available for hire throughout Essex, London, and the South East."
-    - var page_image = "https://www.thefluidevents.co.uk/img/gallery/fluidfun_laughing_dark.jpg"
+    block config
+      - var page_title = "Prosecco Van Hire | Essex | The Fluid Events Co."
+      - var page_description = "Our prosecco van, mobile bar is available for hire throughout Essex, London, and the South East. Our packages can be tailored to suit your wedding, party or corporate event."
+      - var page_image = "https://www.thefluidevents.co.uk/img/gallery/fluidfun_laughing_dark.jpg"
     block meta
       meta(charset='utf-8')
       meta(http-equiv='X-UA-Compatible' content='IE=edge, chrome=1')
@@ -29,7 +30,8 @@ html(lang="en")
 
       //- Structured Data (https://developers.google.com/search/docs/guides/intro-structured-data)
       script(type="application/ld+json")
-        include structured_data.json
+        block structured_data
+          include structured_data.json
 
       //- Global Site Tag (gtag.js) - Google Analytics
       script(async src="https://www.googletagmanager.com/gtag/js?id=UA-104065684-1")
@@ -37,6 +39,7 @@ html(lang="en")
 
       //- TODO: Google AMP
       //- TODO: Port Blog
+      //- TODO: Public Events page (where to find us)
 
     block title
       title=page_title
