@@ -26,7 +26,7 @@ module.exports = {
       use: [{
         loader: 'pug-static-loader',
         options: {
-          pretty: true,
+          pretty: false,
           locals: { foo: 'bar' }
         }
       }]
