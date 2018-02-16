@@ -91,7 +91,7 @@ html(lang="en")
   body(role='document')
     block stylesheets
 
-      link(rel="preload" as="style" href='/css/master.css' onload="this.rel='stylesheet'")
+      link(rel="preload" as="style" href='/css/master.css' onload="this.onload=null;this.rel='stylesheet'")
       noscript
         link(rel="stylesheet" href='/css/master.css')
 
