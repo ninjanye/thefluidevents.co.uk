@@ -1,3 +1,1 @@
-window.lazyLoadOptions = {
-    elements_selector: '.lazy'
-};
+window.lazyLoadOptions = { elements_selector: '.lazy' };
