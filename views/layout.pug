@@ -90,8 +90,10 @@ html(lang="en")
 
   body(role='document')
     block stylesheets
+
+      link(rel="preload" as="style" href='/css/master.css' onload="this.rel='stylesheet'")
       noscript
-        link(rel="stylesheet" type="text/css" href='/css/master.css')
+        link(rel="stylesheet" href='/css/master.css')
 
     .header_container.page-width
       a.header_container__logo(href="/")
@@ -119,5 +121,6 @@ html(lang="en")
       script
         include ../assets/js/lazyload.js
         include ../assets/js/ga.js
+        include ../assets/js/csspreload.js
       script(src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.3.1/lazyload.min.js" async)
       script(src='/js/main.js' defer)
