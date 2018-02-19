@@ -1,7 +1,7 @@
 #contact-us,
 #contact-us.section_header h1 span
   background-color: $colour_three
-  color: $colour_one
+  color: $primary_colour_dark
 
 #contact-us.section_header h1
   padding-top: 10px
@@ -31,7 +31,7 @@
 #contact-us form input,
 #contact-us form textarea
   padding: 8px
-  border: 1px solid $primary_colour_light
+  border: 1px solid $colour_one
   border-radius: 3px
   background-color: white
   color: $primary_colour_dark
@@ -39,30 +39,22 @@
   width: 100%
 
 #contact-us form input#submit
-  border-color: light(red)
-  background-color: $colour_two
+  border-color: $colour_cta_dark
+  background-color: $colour_cta
   padding: 10px
-  color: $primary_colour_dark
   font-weight: bold
 
 #contact-us form input#submit:hover
-  background-color: $colour_one
+  background-color: $colour_cta
 
 #contact-us form input::-webkit-input-placeholder,
-#contact-us form textarea::-webkit-input-placeholder
-  color: $primary_colour_dark
-
+#contact-us form textarea::-webkit-input-placeholder,
 #contact-us form input:-moz-placeholder,
-#contact-us form textarea:-moz-placeholder
-  color: $primary_colour_dark
-  
-#contact-us form input:-moz-placeholder,
-#contact-us form textarea:-moz-placeholder
-  color: $primary_colour_dark
-  
+#contact-us form textarea:-moz-placeholder,
 #contact-us form input:-ms-input-placeholder,
 #contact-us form textarea:-ms-input-placeholder
   color: $primary_colour_dark
+  border: 1px solid $colour_one
 
 @media only screen and (max-width: $mobile_width)
   #contact-us form .form_details_container
