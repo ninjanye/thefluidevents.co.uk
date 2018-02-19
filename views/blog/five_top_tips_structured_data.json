@@ -15,7 +15,11 @@
       "width": "600",
       "height": "60",
       "url": "https://www.thefluidevents.co.uk/img/fluid_events_email_signature.jpg"
-      }
+    },
+    "areaServed":[
+      {"@type": "Region", "name": "Essex"},
+      {"@type": "City", "name": "Chelmsford"}
+    ]
   },
   "author": {
     "@type": "Person",
