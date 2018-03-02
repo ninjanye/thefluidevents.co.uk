@@ -11,7 +11,7 @@
     "https://plus.google.com/u/1/117425984212672074805"    
   ],
   "areaServed":[
-    {"@type": "Region", "name": "Essex"},
+    {"@type": "State", "name": "Essex"},
     {"@type": "City", "name": "Chelmsford"}
   ],
   "contactPoint": [{
