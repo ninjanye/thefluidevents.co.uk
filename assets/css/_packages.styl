@@ -29,6 +29,10 @@
   flex-grow: 1
   padding: 0 40px
 
+.packages_content a.package.custom .btn,
+.packages_content a.package.promo .btn  
+  border: none
+
 .packages_content .package h3
   margin: 0
   padding: 10px
@@ -72,7 +76,6 @@
 .packages_content .package .cta
   display: flex
   justify-content: space-around
-  background-color: $colour_two
   padding: 10px
   font-weight: bold
   text-align: center
@@ -80,8 +83,8 @@
 .packages_content .package .cta:hover
   text-decoration: underline
 
-.packages_content .package .cta div 
-  text-align: center
+.packages_content .package .cta .enquire 
+  width: 100%
 
 .packages_content .package .price
   font-size: 20px
