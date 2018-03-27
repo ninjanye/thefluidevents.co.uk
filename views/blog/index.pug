@@ -1,11 +1,16 @@
 extends ../layout
 
+block config
+  - var page_title = "Prosecco Van Essex | Blog | The Fluid Events Co."
+  - var page_description = "As we travel around essex with our prosecco van, we'll try and blog about the interesting things we see and do."
+  - var page_image = "https://www.thefluidevents.co.uk/img/gallery/flo_nearside_woodland.bw.large.jpg"
+
 block content
   .hero.packages.lazy(data-src='/img/gallery/flo_nearside_woodland.bw.large.jpg')
     h1 Our blog
 
   p.page-width.blog_intro 
-    span We are passionate about prosecco and have embarked on a new adventure to serve prosecco (and more) throughout Essex. 
+    span We are passionate about prosecco and have made it our mission to serve prosecco (and more) throughout Essex. 
     span Along the way we will be blogging about our experience, sharing the lessons we've learnt and the anything else may be of interest.
 
   h2 Our top posts
