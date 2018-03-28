@@ -12,28 +12,28 @@
 .header_container__logo img
   height: 60px
 
-.header_container nav
+.header_container .nav
   display: flex
   flex-grow: 1; 
   flex-flow: row wrap
   justify-content: flex-end
 
-.header_container nav a
+.header_container .nav a
   font-size: $font-size-large
   color: black
   text-decoration: none
   padding: 5px 15px
 
-.header_container nav a .ico
+.header_container .nav a .ico
   margin-right: 10px
   height: 1.2em
   float left
 
 @media only screen and (max-width: 639px)
-  .header_container nav
+  .header_container .nav
     justify-content: center
 
-  .header_container nav a
+  .header_container .nav a
     font-size: $font-size-small
 
   .header_container__logo
