@@ -1,0 +1,31 @@
+extends bloglayout
+
+block config
+  - var page_title = "Raising money for Mind Essex | Prosecco Van by The Fluid Events Co."
+  - var page_description = "Over the course of the evening our mobile prosecco bar raised over £1500 at our quiz night at Hawkwell Baptist Church in Rochford, Essex"
+  - var page_image = "https://www.thefluidevents.co.uk/img/gallery/teamflo_all.jpg"
+
+block structured_data
+  include raising-money-for-mind-essex.json
+
+block content
+  .blog_content.page-width 
+    .blog_text
+      include:marked raising-money-for-mind-essex.1.md
+
+  p.cta
+    a.btn(href="#contact") Enquire now
+
+  .blog_content.page-width 
+    .blog_text
+      include:marked raising-money-for-mind-essex.2.md
+
+  .gallery.page-width.masonry
+    .item
+      img.lazy(data-src="/img/gallery/charity_quiz/flo_serving.jpeg", alt="serving a pint form our mobile proseeco van")
+    .item
+      img.lazy(data-src="/img/gallery/charity_quiz/audience1.jpeg", alt="the audience at the quiz night")
+    .item
+      img.lazy(data-src="/img/gallery/charity_quiz/flo2.jpeg", alt="full prosecco glasses")
+    .item
+      img.lazy(data-src="/img/gallery/charity_quiz/flo1.jpeg", alt="Our beautiful prosecco van")
