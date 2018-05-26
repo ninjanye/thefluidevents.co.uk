@@ -3,7 +3,7 @@ extends layout
 block config
   - var page_title = "Public events in essex | The Fluid Events Co."
   - var page_description = "We often have people ask us when and where they can come and see our beautiful prosecco van mobile bar. Here we list all the public events where you can find us in Essex."
-  - var page_image = "https://www.thefluidevents.co.uk/img/gallery/flo-rochford-essex.jpeg"
+  - var page_image = "https://www.thefluidevents.co.uk/img/gallery/flo-rochford-essex.jpg"
 
 block content
   - var events = []
@@ -14,7 +14,7 @@ block content
   - events.push({title: 'Miracle for Macey', date: new Date('2018-08-04'), time: '11am til 4pm', description: 'We will be serving chilled lager and our famous prosecco at this brilliant cause. Please come down and show your support at this wonderful event', location: 'prince avenue academy school westcliff, essex'})
 
   //- .hero.hero_slim.packages.lazy(data-src='/img/gallery/flo_nearside_woodland.bw.large.jpg')  
-  .hero.hero_slim.packages.lazy(data-src='/img/gallery/flo-rochford-essex.jpeg')  
+  .hero.hero_slim.packages.lazy(data-src='/img/gallery/flo-rochford-essex.jpg')  
     h1 Public events in Essex
 
   a#wedding(visibility="hidden")
