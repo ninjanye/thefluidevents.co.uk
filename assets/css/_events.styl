@@ -1,0 +1,119 @@
+.events_grid
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  align-content: stretch
+
+.events_grid .event
+  flex: 1 0 25%
+  background-color: $colour_three
+  border: solid 1px $colour_one
+  margin: 20px 10px
+  display: flex
+  flex-direction: column
+  text-decoration: none
+  color: $primary_colour_dark
+
+.events_grid .event.custom,
+.events_grid .event.promo
+  background-color: $colour_two
+  text-align: center
+  font-weight: bold
+  color: $primary_colour_dark
+  font-size: 40px
+  text-transform: capitalize
+  line-height: 1.5
+
+.events_grid .event.custom p,
+.events_grid .event.promo p
+  flex-grow: 1
+  padding: 0 40px
+
+.events_grid .event.custom .btn,
+.events_grid .event.promo .btn  
+  border: none
+
+.events_grid .event h3
+  margin: 0
+  padding: 10px
+  text-align: center
+  text-transform: capitalize
+  color: black
+
+.events_grid .event ul
+  padding: 20px 20px
+  display: flex
+  flex-direction: column
+  flex-grow: 1
+  margin: 0
+
+.events_grid .event ul li
+  font-style: italic
+  list-style: none
+  margin: 5px 0
+
+.events_grid .event ul li.description
+  padding-bottom: 20px
+
+.events_grid .event ul li.location,
+.events_grid .event ul li.url
+  margin-top: auto
+
+.events_grid .event ul li span.location_text
+  text-transform: capitalize
+
+// .events_grid .event ul li:before
+//   content : '✓'
+//   color : green
+//   margin-right: 10px
+
+.events_grid .event ul li span.option
+  background-color: $colour_two
+  padding: 2px 5px
+  border-radius: 4px
+  margin-left: 5px
+  font-size: 12px
+
+.events_grid .event .most_popular .heart
+  padding: 0 5px
+  color: red
+
+.events_grid .event .most_popular
+  background-color: $colour_one
+  color: white
+  padding: 5px 10px
+  text-align: center
+
+.events_grid .event .cta
+  display: flex
+  justify-content: space-around
+  padding: 10px
+  font-weight: bold
+  text-align: center
+
+.events_grid .event .cta:hover
+  text-decoration: underline
+
+.events_grid .event .cta .enquire 
+  width: 100%
+
+.events_grid .event .event_date
+  font-size: 20px
+  font-weight: bold
+  background-color: white
+  text-align: center
+  padding: 5px
+
+.events_grid .event .event_date .time
+  font-size: 16px
+  font-weight: normal
+
+.events_grid .event .cta .enquire a:hover
+  background-color: blue
+
+@media only screen and (max-width: $mobile_width)
+  .events_grid .event
+    flex-basis: 90%
+  
+  .events_grid .event.custom
+    order: 1

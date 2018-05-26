@@ -1,0 +1,73 @@
+extends layout
+
+block config
+  - var page_title = "Public events in essex | The Fluid Events Co."
+  - var page_description = "We often have people ask us when and where they can come and see our beautiful prosecco van mobile bar. Here we list all the public events where you can find us in Essex."
+  - var page_image = "https://www.thefluidevents.co.uk/img/gallery/flo-rochford-essex.jpeg"
+
+block content
+  - var events = []
+  - events.push({title: 'Stock Village Christmas Market', date: new Date('2017-12-01'), time: '4pm til 6pm', url: 'www.stockvillage.com', description: 'We will be showcasing Flo with an exclusive offer at this beautiful venue in Rochford.', location: 'stock village, essex'})
+  - events.push({title: 'The Old House Wedding Fayre', date: new Date('2018-05-20'), time: '3pm til 6pm', url: 'www.google.com', description: 'We will be showcasing Flo with an exclusive offer at this beautiful venue in Rochford.', location: 'the old house, rochford, essex'})
+  - events.push({title: 'Ashingdon School Fete', date: new Date('2018-06-16'), time: '12 noon til 4pm', url: 'ashingdonprimaryacademy.org', description: 'We will be serving chilled lager and our famous prosecco at this family fun day', location: 'ashingdon primary school, ashingdon, essex'})
+  - events.push({title: 'Plumberow School Fete', date: new Date('2018-06-30'), time: '1pm til 4pm', url: 'plumberowprimaryacademy.org', description: 'We will be serving chilled lager and our famous prosecco at this fun packed event', location: 'plumberow academy, hockley, essex'})
+  - events.push({title: 'Miracle for Macey', date: new Date('2018-08-04'), time: '11am til 4pm', description: 'We will be serving chilled lager and our famous prosecco at this brilliant cause. Please come down and show your support at this wonderful event', location: 'prince avenue academy school westcliff, essex'})
+
+  //- .hero.hero_slim.packages.lazy(data-src='/img/gallery/flo_nearside_woodland.bw.large.jpg')  
+  .hero.hero_slim.packages.lazy(data-src='/img/gallery/flo-rochford-essex.jpeg')  
+    h1 Public events in Essex
+
+  a#wedding(visibility="hidden")
+  h2 Upcoming events
+
+  .events_grid.page-width
+    each event in events.filter(e => e.date > new Date().setHours(0,0,0,0))
+      .event
+        h3= event.title
+        .event_date 
+          div= event.date.toDateString()
+          div.time= event.time
+        ul
+          li.description= event.description
+          if event.url
+            li.url
+              a(target="_blank" href='http://' + event.url)= event.url
+          li.location
+            span.location_text= event.location 
+            a(target="_blank" href='https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(event.location)) [map]
+        .cta
+          .enquire 
+            a.btn(href='#contact') contact us
+
+  include _promo
+
+  a#corporate(visibility="hidden")
+  h2 Past events
+
+  .section_info.page-width
+    span We are sorry you've missed us, but we've been at some amazing public events already throughout Essex.  Here is what we've been up to:
+
+  .events_grid.page-width
+    each event in events.filter(e => e.date < new Date().setHours(0,0,0,0))
+      .event
+        h3= event.title
+        .event_date 
+          div= event.date.toDateString()
+          div.time= event.time
+        ul
+          li.description= event.description
+          if event.url
+            li.url
+              a(target="_blank" href='http://' + event.url)= event.url
+          li.location
+            span.location_text= event.location 
+            a(target="_blank" href='https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(event.location)) [map]
+        .cta
+          .enquire 
+            a.btn(href='#contact') contact us
+
+
+
+  .section_info.page-width
+    p If you would like more information on where you can come and meet our prosecco van (Flo) please get in touch and 
+      a(href="#contact") using our contact form

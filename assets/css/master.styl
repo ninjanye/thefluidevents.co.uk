@@ -61,6 +61,7 @@ h1, h2
   font-weight: bold
 
 .btn
+  display: block
   padding: 5px 10px
   background-color: $colour_two
   color: $primary_colour_dark
@@ -84,6 +85,7 @@ h1, h2
 @import '_about'
 @import '_promo'
 @import '_packages'
+@import '_events'
 @import '_contact'
 @import '_footer'
 @import '_blog'
@@ -105,6 +107,10 @@ h1, h2
     display: block
 
 @media only screen and (max-width: $mobile_width)
+  .section_header h1 span,
+  .section_header h2 span
+    padding: 0 20px
+
   .masonry
     column-count: 2
 
