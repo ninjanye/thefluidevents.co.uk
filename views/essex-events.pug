@@ -7,13 +7,16 @@ block config
 
 block content
   - var events = []
-  - events.push({title: 'Stock Village Christmas Market', date: new Date('2017-12-01'), time: '4pm til 6pm', url: 'www.stockvillage.com', description: 'We will be showcasing Flo with an exclusive offer at this beautiful venue in Rochford.', location: 'stock village, essex'})
-  - events.push({title: 'The Old House Wedding Fayre', date: new Date('2018-05-20'), time: '3pm til 6pm', url: 'www.google.com', description: 'We will be showcasing Flo with an exclusive offer at this beautiful venue in Rochford.', location: 'the old house, rochford, essex'})
-  - events.push({title: 'Ashingdon School Fete', date: new Date('2018-06-16'), time: '12 noon til 4pm', url: 'ashingdonprimaryacademy.org', description: 'We will be serving chilled lager and our famous prosecco at this family fun day', location: 'ashingdon primary school, ashingdon, essex'})
-  - events.push({title: 'Plumberow School Fete', date: new Date('2018-06-30'), time: '1pm til 4pm', url: 'plumberowprimaryacademy.org', description: 'We will be serving chilled lager and our famous prosecco at this fun packed event', location: 'plumberow academy, hockley, essex'})
-  - events.push({title: 'Miracle for Macey', date: new Date('2018-08-04'), time: '11am til 4pm', description: 'We will be serving chilled lager and our famous prosecco at this brilliant cause. Please come down and show your support at this wonderful event', location: 'prince avenue academy school westcliff, essex'})
+  - events.push({title: 'Stock Village Christmas Market', date: new Date('2017-12-02'), time: '4pm til 6pm', url: 'http://www.stock-pc.gov.uk/wp-content/uploads/2017/09/stock-village-christmas-market.pdf', description: 'This is the first Christmas Market Stock Village has put on and it promises to be an incredible event. We\'ll be serving chilled prosecco and pink gin, so why not come and give it a try', location: 'the square, stock village, essex'})
+  - events.push({title: 'The Old House Wedding Fayre', date: new Date('2018-05-20'), time: '3pm til 6pm', url: 'https://www.rochford.gov.uk/leisure-and-tourism/visit-rochford-district/heritage-attractions/weddings-district/old-house', description: 'We will be showcasing Flo at this beautiful new wedding venue in Rochford. Come say hi and pick up your exclusive offer', location: 'the old house, rochford, essex'})
+  - events.push({title: 'Fluid Events Charity Quiz Night', date: new Date('2018-04-04'), time: '8pm til 11pm', description: 'With our man, John, running the London Marathon we just had to help him raise money for Mind.  Thank you to Hawkwell Baptist Church for allowing us the use of their brilliant church for this event', location: 'Hawkwell Baptost Church, Rochford, Essex'})  
+  - events.push({title: 'Ashingdon School Fete', date: new Date('2018-06-16'), time: '12 noon til 4pm', url: 'https://ashingdonprimaryacademy.org', description: 'We will be serving chilled lager and our gorgeous frizzante at this family fun day.', location: 'ashingdon primary academy, ashingdon, essex'})
+  - events.push({title: 'Plumberow School Fete', date: new Date('2018-06-30'), time: '1pm til 4pm', url: 'https://plumberowprimaryacademy.org', description: 'We will be serving chilled lager and our gorgeous frizzante at this fun packed event.', location: 'plumberow primary academy, hockley, essex'})
+  - events.push({title: 'Miracle for Macey', date: new Date('2018-08-04'), time: '11am til 4pm', description: 'We will be serving chilled lager and our famous pimped prosecco at this brilliant event. Please come down and show your support for this wonderful cause', location: 'prince avenue academy school westcliff, essex'})
+  - events.push({title: 'Rochford Christmas Festival', date: new Date('2018-12-02'), time: '3pm til 6pm', description: 'We are delighted to be part of this years Rochford Christmas Festival.  This fantastic event is always a must if you are in the area.', location: 'Rochford Square, Rochford, Essex'})
+  - events.push({title: 'Stock Village Christmas Market 2018', date: new Date('2018-12-01'), time: '4pm til 6pm', url: 'http://www.stock-pc.gov.uk/wp-content/uploads/2017/09/stock-village-christmas-market.pdf', description: 'Once again we\'ll be ready to serve pimped prosecco at this wonderful event.  The square is transformed into a magical space full of festivities for all ages. A must for your Christmas calendar', location: 'the square, stock village, essex'})
+  - events = events.sort(function(a,b){ return a.date - b.date })
 
-  //- .hero.hero_slim.packages.lazy(data-src='/img/gallery/flo_nearside_woodland.bw.large.jpg')  
   .hero.hero_slim.packages.lazy(data-src='/img/gallery/flo-rochford-essex.jpg')  
     h1 Public events in Essex
 
@@ -22,24 +25,9 @@ block content
 
   .events_grid.page-width
     each event in events.filter(e => e.date > new Date().setHours(0,0,0,0))
-      .event
-        h3= event.title
-        .event_date 
-          div= event.date.toDateString()
-          div.time= event.time
-        ul
-          li.description= event.description
-          if event.url
-            li.url
-              a(target="_blank" href='http://' + event.url)= event.url
-          li.location
-            span.location_text= event.location 
-            a(target="_blank" href='https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(event.location)) [map]
-        .cta
-          .enquire 
-            a.btn(href='#contact') contact us
+      include _event
 
-  include _promo
+  include _promo_public_event
 
   a#corporate(visibility="hidden")
   h2 Past events
@@ -49,24 +37,7 @@ block content
 
   .events_grid.page-width
     each event in events.filter(e => e.date < new Date().setHours(0,0,0,0))
-      .event
-        h3= event.title
-        .event_date 
-          div= event.date.toDateString()
-          div.time= event.time
-        ul
-          li.description= event.description
-          if event.url
-            li.url
-              a(target="_blank" href='http://' + event.url)= event.url
-          li.location
-            span.location_text= event.location 
-            a(target="_blank" href='https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(event.location)) [map]
-        .cta
-          .enquire 
-            a.btn(href='#contact') contact us
-
-
+      include _event
 
   .section_info.page-width
     p If you would like more information on where you can come and meet our prosecco van (Flo) please get in touch and 

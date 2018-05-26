@@ -1,0 +1,17 @@
+.event
+  h3= event.title
+    if event.url
+      a.url(href=event.url target="_blank")
+        img.ico(src="/img/external_link.svg", alt="Visit event website")
+  .event_date 
+    div= event.date.toDateString()
+    div.time= event.time
+  ul
+    li.description= event.description
+    li.location
+      a(target="_blank" href='https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(event.location))
+        img.ico(src="/img/location_pin.svg", alt="map pin")
+        span.location_text= event.location 
+  .cta
+    .enquire 
+      a.btn(href='#contact') contact us
