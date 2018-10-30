@@ -1,9 +1,10 @@
-extends layout
+extends ../layout
 
 block config
   - var page_title = "Upcoming events in essex | Prosecco Van | The Fluid Events Co."
   - var page_description = "We often have people ask us when and where they can come and see our beautiful prosecco van mobile bar. Here we list all the public events where you can find us in Essex."
-  - var page_image = "https://www.thefluidevents.co.uk/img/gallery/flo-rochford-essex.jpg"
+  - var page_image = "/img/gallery/flo_old_house.jpg"
+  - var page_path = '/essex-events'
 
 block content
   - var events = []
@@ -18,10 +19,9 @@ block content
   - events.push({title: 'Stock Village Christmas Market 2018', date: new Date('2018-12-01'), time: '4pm til 6pm', url: 'http://www.stock-pc.gov.uk/wp-content/uploads/2017/09/stock-village-christmas-market.pdf', description: 'Once again we\'ll be ready to serve pimped prosecco at this wonderful event.  The square is transformed into a magical space full of festivities for all ages. A must for your Christmas calendar', location: 'the square, stock village, essex'})
   - events = events.sort(function(a,b){ return a.date - b.date })
 
-  .hero.hero_slim.packages.lazy(data-src='/img/gallery/flo-rochford-essex.jpg')  
-
-  a#wedding(visibility="hidden")
-  h1 Upcoming public events
+  .section_header
+    h1 
+      span public events
 
   .section_info.page-width
     span Below is a list of places where you can come and see Flo.  However these are just 

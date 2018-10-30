@@ -1,14 +1,20 @@
 extends layout
 
-block content
-  img.page-width.hero(src='/img/gallery/flo_old_house_new.jpg' alt="Flo The Fluid Events Prosecco Van")
+block config
+  - var page_title = "Prosecco Van Hire | Essex | The Fluid Events Co."
+  - var page_description = "Our prosecco van, mobile bar is available for hire throughout Essex, London, and the South East. Our packages can be tailored to suit your wedding, party or corporate event."
+  - var page_image = "/img/gallery/flo_old_house.jpg"
+  - var page_path = '/'
 
-  include _callouts
+block content
 
   a#about(visibility="hidden")
   include _about
 
   a#gallery(visibility="hidden")
+  .section_header
+    h1 
+      span Gallery
   include _gallery
 
   include _promo

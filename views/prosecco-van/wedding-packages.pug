@@ -1,0 +1,34 @@
+extends ../layout
+
+block config
+  - var page_title = "Wedding Prosecco Van Packages | Essex | The Fluid Events Co."
+  - var page_description = "We have a range of packages specifically catered for weddings weddings throughout Essex. We can customise packages specifically to your needs without breaking the bank"
+  - var page_image = "/img/gallery/teamflo_all.jpg"
+  - var page_path = '/prosecco-van/wedding-packages'
+
+block content
+  //- .hero.hero_slim.packages.lazy(data-src='/img/gallery/flo_in_snow.jpg')  
+
+  .section_header
+    h1 
+      span Wedding Packages
+
+  .section_info.page-width
+    span These are our most popular wedding packages however 
+    span.bold we can tailor any of our wedding prosecco van packages to your specific requirements. 
+    span Each package can be customised to serve any combination of prosecco, pimms, peroni, wine and more. 
+    span For more information please get in touch via our 
+    a(href="#contact") contact us
+    span  section
+
+  .packages_content.page-width
+    include ../_package_wedding_prosecco
+    include ../_package_wedding_pimped
+    include ../_package_wedding_bridal
+
+  .section_info.page-width
+    p The above represents our most popular packages, if you would like something unique, we would love to make it happen. 
+    p Get in touch and 
+      a(href="#contact") enquire about a custom package option.
+
+  include ../_promo

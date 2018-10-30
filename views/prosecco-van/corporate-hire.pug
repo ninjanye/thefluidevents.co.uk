@@ -1,0 +1,31 @@
+extends ../layout
+
+block config
+  - var page_title = "Corporate Hire Prosecco Van Packages | Essex | The Fluid Events Co."
+  - var page_description = "Our corporate packages are tailored to your event's specific needs.  Enquire now to have one of our members of staff help build the right package for your event."
+  - var page_image = "/img/gallery/flo_business_cards.jpg"
+  - var page_path = '/prosecco-van/corporate-hire'
+
+block content
+
+  .section_header
+    h1 
+      span Corporate Hire
+
+  .section_info.page-width
+    span Our corporate packages ensure your event wow's the crowd and generates a buzz that people will remember.   
+    span.bold Our corporate package can be customised to serve any combination of prosecco, pimms, peroni, wine or cocktails 
+    span and we will work closely with you to ensure the personal touches you need are in place.
+    span For more information please get in touch via our 
+    a(href="#contact") contact us
+    span  section
+
+  .packages_content.page-width
+    include ../_package_corporate
+    include ../_package_get_in_touch
+    include ../_package_dry_hire
+
+  .section_info.page-width
+    p The above represents our most popular packages, if you would like something unique, we would love to make it happen. 
+    p Get in touch and 
+      a(href="#contact") enquire about a custom package option.

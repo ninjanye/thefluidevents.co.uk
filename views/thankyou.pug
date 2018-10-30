@@ -3,12 +3,15 @@ extends layout
 block config
   - var page_title = "Thank you for your enquiry - The Fluid Events Co."
   - var page_description = "Thank you for enquiring about our Proecco Van.  We aim to respond to all requests within 48 hours."
-  - var page_image = "https://www.thefluidevents.co.uk/img/gallery/fluidfun_laughing_dark.jpg"
+  - var page_image = "/img/gallery/flo_nearside_woodland.bw.large.jpg"
+  - var page_path = '/thankyou'
+  
 block content
-  .hero.thankyou.lazy(data-src='/img/gallery/flo_nearside_woodland.bw.large.jpg')
-    h1 Thank you!
+  .section_header
+    h1 
+      span Thank you!
 
-  h2 We'll be in touch
+  h3 We'll be in touch
 
   .section_info.page-width
     span Thank you for your submission.  We will get back to you as soon as possible. 
@@ -31,6 +34,6 @@ block content
       img(src="/img/google-plus.svg" alt="Google Plus logo")
       .title google+
 
-    a.callout.callout__events(href="/#events")
+    a.callout.callout__events(href="/prosecco-van/essex-events")
       img.lazy(data-src="/img/megaphone.svg" alt="events image")
       .title events

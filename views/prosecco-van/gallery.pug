@@ -1,0 +1,27 @@
+extends ../layout
+
+block config
+  - var page_title = "Prosecco Van Gallery | Essex | The Fluid Events Co."
+  - var page_description = "We love Flo &#10084; (our prosecco van).  She makes people smile and is always a talking point at every event"
+  - var page_image = "/img/gallery/flo_colourful.jpg"
+  - var page_path = '/prosecco-van/gallery'
+
+block content
+
+  a#wedding(visibility="hidden")
+  .section_header
+    h1 
+      span Gallery
+
+  .section_info.page-width
+    span We love Flo 
+    span.heart &#10084; 
+    span (our prosecco van). She makes people smile and is always a talking point at every event.
+    span We always try and take as many pictures as we can. 
+    span If you'd like to see more, we also have an 
+    a(href="https://www.instagram.com/fluideventsco/" target="_blank") Instagram account 
+    span and 
+    a(href="https://www.facebook.com/thefluideventsco/" target="_blank") Facebook page 
+    span where you can follow us and keep up to date with all of Flo's adventures.
+
+  include ../_gallery

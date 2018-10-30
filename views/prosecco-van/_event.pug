@@ -3,7 +3,7 @@
     if event.url
       a.url(href=event.url target="_blank")
         img.ico(src="/img/external_link.svg", alt="Visit event website")
-  .event_date 
+  .event_date
     div= event.date.toDateString()
     div.time= event.time
   ul

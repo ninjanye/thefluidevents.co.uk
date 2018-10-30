@@ -1,30 +1,32 @@
 doctype html
 html(lang="en")
   head
+    - var page_host = "https://www.thefluidevents.co.uk"
     block config
       - var page_title = "Prosecco Van Hire | Essex | The Fluid Events Co."
       - var page_description = "Our prosecco van, mobile bar is available for hire throughout Essex, London, and the South East. Our packages can be tailored to suit your wedding, party or corporate event."
-      - var page_image = "https://www.thefluidevents.co.uk/img/gallery/flo_old_house_new.jpg"
+      - var page_image = "/img/gallery/flo_old_house_new.jpg"
+      - var page_path = '/'
     block meta
       meta(charset='utf-8')
       meta(http-equiv='X-UA-Compatible' content='IE=edge, chrome=1')
       meta(name='description' content=page_description)
-      meta(name='image' content=page_image)
+      meta(name='image' content=page_host + page_image)
       meta(name='author' content='ninjanye')
       meta(name="viewport" content="width=device-width, initial-scale=1")
       meta(name="theme-color" content="#EFC1BA")
 
       //- OpenGraph
-      meta(property="og:url" content="https://www.thefluidevents.co.uk")
+      meta(property="og:url" content=page_host + page_path)
       meta(property="og:type" content="website")
       meta(property="og:title" content=page_title)
       meta(property="og:description" content=page_description)
-      meta(property="og:image" content=page_image)
+      meta(property="og:image" content=page_host + page_image)
 
       //- Google Plus card
       meta(itemprop="name" content=page_title)
       meta(itemprop="description" content=page_description)
-      meta(itemprop="image" content=page_image)
+      meta(itemprop="image" content=page_host + page_image)
 
       meta(name="google-site-verification" content="gack_NwTv1bXdcLAFzvPG-o34aCk4tf8Z-tNdBfI284")
 
@@ -32,8 +34,6 @@ html(lang="en")
       script(type="application/ld+json")
         block structured_data
           include structured_data.json
-
-      //- TODO: Public Events page (where to find us)
 
     block title
       title=page_title
@@ -77,7 +77,7 @@ html(lang="en")
       .callout object, .callout img { padding-top: 20px; padding-bottom: 20px; max-height: 100px; max-width: 100px; }
       .callout .title { padding-bottom: 10px; }
 
-      @media only screen and (min-width: $mobile_width) {
+      @media only screen and (min-width: 639px) {
         .hero h1 { font-size: 100px; }
       }
 
@@ -93,11 +93,14 @@ html(lang="en")
         .hero { min-height: 250px; }
 
         .callouts { min-height: 50px; margin-top: auto }
-        .callouts a.callout { flex-basis: 100%; }
+        .callouts a.callout { flex-basis: 50%; }
         .callouts__blog a { min-height: 120px; }
         .callout { flex-basis: 80%; }
+        .callouts .callout .title { font-size: 20px; letter-spacing: 2px; }
         .callout img { padding-top: 10px; padding-bottom: 5px; }
         .callout__social { flex-basis: 50%; }
+
+        .callouts .callout.callout__contact { flex-basis: 100% }
       }
 
   body(role='document')
@@ -120,6 +123,9 @@ html(lang="en")
           span.email info@thefluidevents.co.uk
 
     main(role='main')
+      img.page-width.hero(src=page_image alt="Flo The Fluid Events Prosecco Van")
+      include _callouts
+
       //- include _offer
       block content
       a#contact(visibility="hidden")
@@ -130,8 +136,13 @@ html(lang="en")
     include _footer
 
     block javascript
+      script.
+        var PAGE_URL = [location.protocol, '//', location.host, location.pathname].join('');
+        var IS_PRODUCTION = location.hostname === "thefluidevents.co.uk"
+
       script
         include ../assets/js/lazyload.js
-        include ../assets/js/ga.js
+        if IS_PRODUCTION
+          include ../assets/js/ga.js
         include ../assets/js/csspreload.js
       script(src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.3.1/lazyload.min.js" async)
