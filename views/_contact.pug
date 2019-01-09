@@ -7,10 +7,12 @@
       span Our prosecco van is available for hire across Essex, and the South East. 
       span Get in touch today and one of our team will be happy to help secure your booking date and answer any questions you may have. 
 
-    form(action="thankyou" method="POST" name="contact" autocomplete="on" netlify)
+    form(action="thankyou" method="POST" name="contact" autocomplete="on" netlify netlify-honeypot="surname")
       .form_details_container
         input#name(type="text" name="name" label="Name" placeholder="Name *" required)
+        input#surname.mobile_only.hide_mobile(name="surname")
         input#email.large(type="email" name="email", label="Email" placeholder="Email *" required)
         input#telephone.large(type="tel" name="telephone", label="Phone" placeholder="Phone number")
       textarea#message(name="event-details" cols="30", rows="5", placeholder="Event details" autocomplete="off")
+      div(netlify-recaptcha)
       input#submit.btn(type="submit" value="Send >") 

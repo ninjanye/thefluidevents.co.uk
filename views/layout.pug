@@ -5,6 +5,7 @@ html(lang="en")
     block config
       - var page_title = "Prosecco Van Hire | Essex | The Fluid Events Co."
       - var page_description = "Our prosecco van, mobile bar is available for hire throughout Essex, London, and the South East. Our packages can be tailored to suit your wedding, party or corporate event."
+
       - var page_image = "/img/gallery/flo_old_house_new.jpg"
       - var page_path = '/'
     block meta
@@ -138,11 +139,8 @@ html(lang="en")
     block javascript
       script.
         var PAGE_URL = [location.protocol, '//', location.host, location.pathname].join('');
-        var IS_PRODUCTION = location.hostname === "thefluidevents.co.uk"
 
       script
         include ../assets/js/lazyload.js
-        if IS_PRODUCTION
-          include ../assets/js/ga.js
         include ../assets/js/csspreload.js
       script(src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.3.1/lazyload.min.js" async)
