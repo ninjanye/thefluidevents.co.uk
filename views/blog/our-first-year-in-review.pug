@@ -1,0 +1,32 @@
+extends bloglayout
+
+block config
+  - var page_title = "Our first year in review | Prosecco Van by The Fluid Events Co."
+  - var page_description = "2018 was our first full year running a Prosecco van. We look back at the high and low points to learn for the future"
+  - var page_image = "/img/gallery/flo_hedge.jpg"
+  - var page_path = '/blog/our-first-year-in-review'
+
+block structured_data
+  include our-first-year-in-review.json
+
+block content
+  .blog_content.page-width
+    .blog_text
+      include:marked our-first-year-in-review.1.md
+
+  p.cta
+    a.btn(href="#contact") Enquire now
+
+  .blog_content.page-width
+    .blog_text
+      include:marked our-first-year-in-review.2.md
+
+  .gallery.page-width.masonry
+    .item
+      img.lazy(data-src="/img/gallery/charity_quiz/flo_serving.jpeg", alt="serving a pint form our mobile prosecco van")
+    .item
+      img.lazy(data-src="/img/gallery/charity_quiz/audience1.jpeg", alt="the audience at the quiz night")
+    .item
+      img.lazy(data-src="/img/gallery/charity_quiz/flo2.jpeg", alt="full prosecco glasses")
+    .item
+      img.lazy(data-src="/img/gallery/charity_quiz/flo1.jpeg", alt="Our beautiful prosecco van")
