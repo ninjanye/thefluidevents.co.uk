@@ -1,4 +1,5 @@
 # Looking into 2019
+<sub>30th January 2019</sub>
 
 It’s January, a quiet time of year for us as far as gigs go, but a busy time for us to get ourselves noticed and get business for the upcoming year. The mobile bar business is competitive and we need to make sure we are first in the queue when people think “ooo I think a Prosecco Van would be perfect for this...but where could I find one?”
 
