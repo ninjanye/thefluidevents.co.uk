@@ -7,12 +7,12 @@ block config
   - var page_path = '/blog/the-taste-test-choosing-prosecco'
 
 block structured_data
-  include the_taste_test_structured_data.json
+  include structured_data.json
 
 block content
   //- .hero.lazy(data-src='/img/gallery/john_serving.jpg')
 
-  .blog_content.page-width     
+  .blog_content.page-width
     .blog_text
-      include:marked the-taste-test.md
+      include:marked content.md
     .blog_image.lazy(data-src="/img/gallery/cheers.jpg", alt="prosecco cheers")

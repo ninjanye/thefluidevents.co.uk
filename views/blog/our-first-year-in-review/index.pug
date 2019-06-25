@@ -7,19 +7,19 @@ block config
   - var page_path = '/blog/our-first-year-in-review'
 
 block structured_data
-  include our-first-year-in-review.json
+  include structured_data.json
 
 block content
   .blog_content.page-width
     .blog_text
-      include:marked our-first-year-in-review.1.md
+      include:marked content.1.md
 
   p.cta
     a.btn(href="#contact") Enquire now
 
   .blog_content.page-width
     .blog_text
-      include:marked our-first-year-in-review.2.md
+      include:marked content.2.md
 
   .gallery.page-width.masonry
     .item
